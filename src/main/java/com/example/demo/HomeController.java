@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class HomeController {
     @GetMapping("/employee")
-    public String loadFormPage(Model model){
+    public String loadFromPage(Model model){
         model.addAttribute("employee", new Employee());
         return "employeeform";
     }
 
     @PostMapping("/employee")
-    public String loadFormPage(@ModelAttribute Employee employee,
+    public String loadFromPage(@ModelAttribute Employee employee,
                                Model model) {
         model.addAttribute("employee", employee);
         return "confirmemployee";
